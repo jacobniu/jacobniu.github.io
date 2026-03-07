@@ -1,0 +1,441 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #fff;
+    color: #2b2d3a;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    background-color: #282c34;
+    border-bottom: 3px solid #e8a44a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ===== Hero ===== */
+.hero {
+    background-color: #282c34;
+    padding: 44px 24px 38px;
+    text-align: center;
+}
+
+.hero-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.hero .subtitle {
+    font-size: 16px;
+    color: #abb2bf;
+    font-weight: 400;
+}
+
+/* ===== Main Container ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 36px 24px 72px;
+}
+
+/* 双列网格布局 */
+#apps-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+/* ===== App Card ===== */
+.app-card {
+    border: 1px solid #e0e2e9;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.app-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border-color: #c8cad5;
+}
+
+/* 应用标题栏 */
+.app-header {
+    background-color: #282c34;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.app-header h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #abb2bf;
+    padding: 11px 20px;
+    width: 100%;
+    font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+    letter-spacing: 0.2px;
+}
+
+/* 应用描述 */
+.app-description {
+    padding: 14px 18px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #4b5263;
+    border-bottom: 1px solid #eceef3;
+    background: #fafbfc;
+}
+
+/* ===== 媒体区域（横向滚动） ===== */
+.media-container {
+    padding: 14px 18px;
+    background: #f5f7fa;
+    border-bottom: 1px solid #eceef3;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #d0d4e0 transparent;
+    /* 拖拽中禁止文字选中 */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.media-container:active {
+    cursor: grabbing;
+}
+
+/* 自定义滚动条（Webkit） */
+.media-container::-webkit-scrollbar {
+    height: 5px;
+}
+.media-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+.media-container::-webkit-scrollbar-thumb {
+    background: #d0d4e0;
+    border-radius: 3px;
+}
+.media-container::-webkit-scrollbar-thumb:hover {
+    background: #b0b6c8;
+}
+
+.media-item {
+    flex: 0 0 auto;
+    width: 260px;
+    border: 1px solid #dde0ea;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    pointer-events: none; /* 拖拽时禁止子元素捕获事件 */
+}
+
+/* 拖拽结束后恢复子元素交互 */
+.media-container.drag-end .media-item {
+    pointer-events: auto;
+}
+
+.media-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    background-color: #fff;
+    display: block;
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
+    pointer-events: auto;
+}
+
+.media-item img:hover {
+    opacity: 0.88;
+}
+
+.media-item video {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    background-color: #000;
+    display: block;
+    pointer-events: auto;
+}
+
+/* ===== 版本列表 ===== */
+.versions-section {
+    padding: 14px 18px 18px;
+}
+
+.versions-section h3 {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #8b92a5;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eceef3;
+}
+
+.version-list {
+    list-style: none;
+}
+
+.version-item {
+    border: 1px solid #e4e7f0;
+    border-radius: 6px;
+    padding: 9px 12px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+    display: block;
+}
+
+.version-item:last-child {
+    margin-bottom: 0;
+}
+
+.version-item:hover {
+    background-color: #fff8f0;
+    border-color: #e8a44a;
+}
+
+.version-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.version-left {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.version-number {
+    font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+    font-size: 12px;
+    font-weight: 600;
+    color: #282c34;
+    background: #f0f2f7;
+    border: 1px solid #dde0ea;
+    border-radius: 4px;
+    padding: 1px 7px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.version-item:hover .version-number {
+    background: #fef3e2;
+    border-color: #e8a44a;
+    color: #b36b00;
+}
+
+.version-description {
+    font-size: 12px;
+    color: #586069;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.version-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.version-date {
+    font-size: 11px;
+    color: #9ba3b2;
+    white-space: nowrap;
+}
+
+.download-btn {
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #e8a44a;
+    border-radius: 4px;
+    padding: 3px 10px;
+    transition: background-color 0.15s ease;
+    white-space: nowrap;
+}
+
+.version-item:hover .download-btn {
+    background-color: #d4892e;
+}
+
+/* ===== 错误提示 ===== */
+.error-tip {
+    text-align: center;
+    color: #7d4500;
+    background: #fff8f0;
+    border: 1px solid #e8a44a;
+    border-radius: 6px;
+    padding: 24px 32px;
+    font-size: 15px;
+    margin: 40px 0;
+    line-height: 1.8;
+}
+
+.error-tip code {
+    font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+    font-size: 13px;
+    background: #fef3e2;
+    border: 1px solid #e8a44a;
+    border-radius: 4px;
+    padding: 1px 7px;
+    color: #b36b00;
+}
+
+.error-tip a {
+    color: #0366d6;
+    text-decoration: underline;
+}
+
+/* ===== 图片模态框 ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.88);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90vw;
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    cursor: default;
+}
+
+.close {
+    position: fixed;
+    top: 18px;
+    right: 28px;
+    color: #fff;
+    font-size: 36px;
+    font-weight: 300;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.75;
+    transition: opacity 0.15s ease;
+    z-index: 1001;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #282c34;
+    border-top: 3px solid #e8a44a;
+    padding: 24px;
+    text-align: center;
+}
+
+.footer p {
+    color: #7a8196;
+    font-size: 13px;
+}
+
+/* ===== 响应式 ===== */
+
+/* 平板：仍保持双列但稍小 */
+@media (max-width: 900px) {
+    #apps-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+/* 手机：单列 */
+@media (max-width: 600px) {
+    #apps-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero .subtitle {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 20px 12px 48px;
+    }
+
+    .version-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .version-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .version-description {
+        white-space: normal;
+    }
+}

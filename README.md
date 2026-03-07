@@ -1,7 +1,7 @@
-# Jacob Niu's Blog
+# Jacob's Apps
 
-personal blog.
+Discover faster, lighter and better apps
 
 ## Getting Started
 
-- Blog address is [here](https://jacobniu.github.io).
+- Website address is [here](https://jacobniu.github.io).

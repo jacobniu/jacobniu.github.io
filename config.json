@@ -1,0 +1,57 @@
+{
+    "apps": [
+      {
+        "id": "app1",
+        "name": "应用名称1",
+        "description": "这是一个功能强大的应用，提供了多种实用功能。",
+        "media": [
+          {
+            "type": "image",
+            "url": "images/test1.png",
+            "alt": "应用截图1"
+          },
+          {
+            "type": "video",
+            "url": "videos/test1.mp4",
+            "poster": "images/test1.png",
+            "alt": "应用演示视频"
+          }
+        ],
+        "versions": [
+          {
+            "version": "1.0.0",
+            "description": "初始版本发布",
+            "downloadUrl": "apps/test1.apk",
+            "releaseDate": "2024-01-01"
+          },
+          {
+            "version": "1.1.0",
+            "description": "修复了若干bug，新增了XX功能",
+            "downloadUrl": "https://example.com/downloads/app1-v1.1.0.zip",
+            "releaseDate": "2024-02-01"
+          }
+        ]
+      },
+      {
+        "id": "app2",
+        "name": "应用名称2",
+        "description": "另一个优秀的应用，专注于提供最佳用户体验。",
+        "media": [
+          {
+            "type": "video",
+            "url": "videos/test1.mp4",
+            "poster": "images/app2-poster.jpg",
+            "alt": "应用演示视频"
+          }
+        ],
+        "versions": [
+          {
+            "version": "2.0.0",
+            "description": "重大更新版本",
+            "downloadUrl": "https://example.com/downloads/app2-v2.0.0.dmg",
+            "releaseDate": "2024-03-01"
+          }
+        ]
+      }
+    ]
+  }
