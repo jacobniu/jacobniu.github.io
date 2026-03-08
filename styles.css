@@ -11,8 +11,8 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    background-color: #fff;
-    color: #2b2d3a;
+    background-color: #1e2127;
+    color: #abb2bf;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -86,17 +86,17 @@ body {
 
 /* ===== App Card ===== */
 .app-card {
-    border: 1px solid #e0e2e9;
+    border: 1px solid #3a3f4b;
     border-radius: 8px;
     overflow: hidden;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    background: #282c34;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .app-card:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    border-color: #c8cad5;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    border-color: #565c6e;
 }
 
 /* 应用标题栏 */
@@ -122,16 +122,16 @@ body {
     padding: 14px 18px;
     font-size: 13px;
     line-height: 1.6;
-    color: #4b5263;
-    border-bottom: 1px solid #eceef3;
-    background: #fafbfc;
+    color: #8b92a5;
+    border-bottom: 1px solid #3a3f4b;
+    background: #21252b;
 }
 
 /* ===== 媒体区域（横向滚动） ===== */
 .media-container {
     padding: 14px 18px;
-    background: #f5f7fa;
-    border-bottom: 1px solid #eceef3;
+    background: #1e2127;
+    border-bottom: 1px solid #3a3f4b;
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
@@ -140,7 +140,7 @@ body {
     cursor: grab;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: thin;
-    scrollbar-color: #d0d4e0 transparent;
+    scrollbar-color: #4b5263 transparent;
     /* 拖拽中禁止文字选中 */
     user-select: none;
     -webkit-user-select: none;
@@ -158,20 +158,20 @@ body {
     background: transparent;
 }
 .media-container::-webkit-scrollbar-thumb {
-    background: #d0d4e0;
+    background: #4b5263;
     border-radius: 3px;
 }
 .media-container::-webkit-scrollbar-thumb:hover {
-    background: #b0b6c8;
+    background: #636d83;
 }
 
 .media-item {
     flex: 0 0 auto;
     width: 260px;
-    border: 1px solid #dde0ea;
+    border: 1px solid #3a3f4b;
     border-radius: 6px;
     overflow: hidden;
-    background: #fff;
+    background: #282c34;
     pointer-events: none; /* 拖拽时禁止子元素捕获事件 */
 }
 
@@ -184,7 +184,7 @@ body {
     width: 100%;
     height: 160px;
     object-fit: contain;
-    background-color: #fff;
+    background-color: #21252b;
     display: block;
     cursor: zoom-in;
     transition: opacity 0.2s ease;
@@ -214,10 +214,10 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    color: #8b92a5;
+    color: #636d83;
     margin-bottom: 10px;
     padding-bottom: 8px;
-    border-bottom: 1px solid #eceef3;
+    border-bottom: 1px solid #3a3f4b;
 }
 
 .version-list {
@@ -225,7 +225,7 @@ body {
 }
 
 .version-item {
-    border: 1px solid #e4e7f0;
+    border: 1px solid #3a3f4b;
     border-radius: 6px;
     padding: 9px 12px;
     margin-bottom: 7px;
@@ -239,7 +239,7 @@ body {
 }
 
 .version-item:hover {
-    background-color: #fff8f0;
+    background-color: #2c2f38;
     border-color: #e8a44a;
 }
 
@@ -262,9 +262,9 @@ body {
     font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
     font-size: 12px;
     font-weight: 600;
-    color: #282c34;
-    background: #f0f2f7;
-    border: 1px solid #dde0ea;
+    color: #abb2bf;
+    background: #3a3f4b;
+    border: 1px solid #4b5263;
     border-radius: 4px;
     padding: 1px 7px;
     white-space: nowrap;
@@ -272,14 +272,14 @@ body {
 }
 
 .version-item:hover .version-number {
-    background: #fef3e2;
+    background: #3d3020;
     border-color: #e8a44a;
-    color: #b36b00;
+    color: #e8a44a;
 }
 
 .version-description {
     font-size: 12px;
-    color: #586069;
+    color: #636d83;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -294,7 +294,7 @@ body {
 
 .version-date {
     font-size: 11px;
-    color: #9ba3b2;
+    color: #565c6e;
     white-space: nowrap;
 }
 
@@ -316,8 +316,8 @@ body {
 /* ===== 错误提示 ===== */
 .error-tip {
     text-align: center;
-    color: #7d4500;
-    background: #fff8f0;
+    color: #e8a44a;
+    background: #2c2416;
     border: 1px solid #e8a44a;
     border-radius: 6px;
     padding: 24px 32px;
@@ -329,15 +329,15 @@ body {
 .error-tip code {
     font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
     font-size: 13px;
-    background: #fef3e2;
+    background: #3d3020;
     border: 1px solid #e8a44a;
     border-radius: 4px;
     padding: 1px 7px;
-    color: #b36b00;
+    color: #e8a44a;
 }
 
 .error-tip a {
-    color: #0366d6;
+    color: #61afef;
     text-decoration: underline;
 }
 
