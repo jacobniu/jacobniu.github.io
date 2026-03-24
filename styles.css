@@ -33,6 +33,8 @@ body {
     height: 52px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .nav-logo {
@@ -40,6 +42,45 @@ body {
     font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.3px;
+    min-width: 0;
+}
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-shrink: 0;
+    border: 1px solid #4b5263;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #21252b;
+}
+
+.lang-btn {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border: none;
+    background: transparent;
+    color: #8b92a5;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.lang-btn:hover {
+    color: #abb2bf;
+    background: #2c313a;
+}
+
+.lang-btn-active {
+    background: #3a3f4b;
+    color: #e8a44a;
+}
+
+.lang-btn-active:hover {
+    background: #3a3f4b;
+    color: #e8a44a;
 }
 
 /* ===== Hero ===== */
@@ -117,14 +158,82 @@ body {
     letter-spacing: 0.2px;
 }
 
-/* 应用描述 */
-.app-description {
+/* 折叠摘要（价值主张 + 定价/开源） */
+.app-summary {
     padding: 14px 18px;
     font-size: 13px;
-    line-height: 1.6;
+    line-height: 1.65;
     color: #8b92a5;
     border-bottom: 1px solid #3a3f4b;
     background: #21252b;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.summary-line-primary {
+    color: #c8cdd8;
+    font-weight: 500;
+}
+
+.summary-line-secondary {
+    color: #7a8196;
+    font-size: 12px;
+}
+
+.app-details-toggle {
+    display: block;
+    width: 100%;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px 16px;
+    border: none;
+    border-bottom: 1px solid #3a3f4b;
+    background: #2c313a;
+    color: #e8a44a;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.app-details-toggle:hover {
+    background: #333842;
+    color: #f0b35c;
+}
+
+.app-details-toggle:focus-visible {
+    outline: 2px solid #e8a44a;
+    outline-offset: -2px;
+}
+
+.app-details {
+    padding: 14px 18px;
+    background: #21252b;
+    border-bottom: 1px solid #3a3f4b;
+}
+
+.detail-block {
+    margin-bottom: 14px;
+}
+
+.detail-block:last-child {
+    margin-bottom: 0;
+}
+
+.detail-block-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: #e8a44a;
+    margin-bottom: 6px;
+}
+
+.detail-block-body {
+    font-size: 12px;
+    line-height: 1.65;
+    color: #8b92a5;
 }
 
 /* ===== 媒体区域（横向滚动） ===== */

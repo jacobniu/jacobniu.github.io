@@ -1,57 +1,154 @@
 {
-    "apps": [
-      {
-        "id": "app1",
-        "name": "应用名称1",
-        "description": "这是一个功能强大的应用，提供了多种实用功能。",
-        "media": [
-          {
-            "type": "image",
-            "url": "images/test1.png",
-            "alt": "应用截图1"
-          },
-          {
-            "type": "video",
-            "url": "videos/test1.mp4",
-            "poster": "images/test1.png",
-            "alt": "应用演示视频"
-          }
-        ],
-        "versions": [
-          {
-            "version": "1.0.0",
-            "description": "初始版本发布",
-            "downloadUrl": "apps/test1.apk",
-            "releaseDate": "2024-01-01"
-          },
-          {
-            "version": "1.1.0",
-            "description": "修复了若干bug，新增了XX功能",
-            "downloadUrl": "https://example.com/downloads/app1-v1.1.0.zip",
-            "releaseDate": "2024-02-01"
-          }
-        ]
+  "site": {
+    "pageTitle": {
+      "zh": "🛠 Jacob 的应用",
+      "en": "🛠 Jacob's Apps"
+    },
+    "navTitle": {
+      "zh": "🛠 Jacob 的应用",
+      "en": "🛠 Jacob's Apps"
+    },
+    "heroSubtitle": {
+      "zh": "更快、更轻、更好用的软件",
+      "en": "Discover faster, lighter and better apps"
+    },
+    "footer": {
+      "zh": "© 2026 设计 Jacob",
+      "en": "© 2026 Design by Jacob"
+    }
+  },
+  "apps": [
+    {
+      "id": "app-a",
+      "name": {
+        "zh": "App A",
+        "en": "App A"
       },
-      {
-        "id": "app2",
-        "name": "应用名称2",
-        "description": "另一个优秀的应用，专注于提供最佳用户体验。",
-        "media": [
-          {
-            "type": "video",
-            "url": "videos/test1.mp4",
-            "poster": "images/app2-poster.jpg",
-            "alt": "应用演示视频"
+      "summaryProblem": {
+        "zh": "给需要「少看手机、多坚持」的人用的离线习惯打卡；无需账号，数据只存在本机。",
+        "en": "Offline habit tracker for people who want consistency without another account—data stays on your device."
+      },
+      "summaryPricing": {
+        "zh": "完全免费；源代码在 MIT 协议下开源，可自用与二次开发。",
+        "en": "Free forever; open source under MIT for personal use and derivatives."
+      },
+      "platforms": {
+        "zh": "Android 8.0+；不提供 iOS / 桌面版（规划中）。",
+        "en": "Android 8.0+; no iOS or desktop build yet (roadmap)."
+      },
+      "pricingDetail": {
+        "zh": "无内购、无广告；不接受捐赠绑定功能。商用二次分发请保留许可证与署名。",
+        "en": "No IAP, no ads, no paywalled features. Redistribution must keep license and attribution."
+      },
+      "privacy": {
+        "zh": "不收集个人标识信息；不联网同步。所需权限：通知（可选，用于提醒）、存储（仅用于导出备份文件）。安装包约 12 MB。",
+        "en": "No accounts, no analytics, no cloud sync. Optional: notifications for reminders; storage access only if you export a backup. ~12 MB download."
+      },
+      "updateChannel": {
+        "zh": "本页「版本历史」提供 APK；更新说明同步在 GitHub Releases。",
+        "en": "APKs listed in Version history below; release notes mirrored on GitHub Releases."
+      },
+      "media": [
+        {
+          "type": "image",
+          "url": "images/test1.png",
+          "alt": {
+            "zh": "应用截图",
+            "en": "App screenshot"
           }
-        ],
-        "versions": [
-          {
-            "version": "2.0.0",
-            "description": "重大更新版本",
-            "downloadUrl": "https://example.com/downloads/app2-v2.0.0.dmg",
-            "releaseDate": "2024-03-01"
+        },
+        {
+          "type": "video",
+          "url": "videos/test1.mp4",
+          "poster": "images/test1.png",
+          "alt": {
+            "zh": "应用演示视频",
+            "en": "App demo video"
           }
-        ]
-      }
-    ]
-  }
+        }
+      ],
+      "versions": [
+        {
+          "version": "1.2.0",
+          "description": {
+            "zh": "修复深色模式下对比度",
+            "en": "Dark mode contrast fixes"
+          },
+          "downloadUrl": "apps/test1.apk",
+          "releaseDate": "2026-01-15"
+        },
+        {
+          "version": "1.1.0",
+          "description": {
+            "zh": "导出 CSV",
+            "en": "CSV export"
+          },
+          "downloadUrl": "https://example.com/downloads/app-a-v1.1.0.zip",
+          "releaseDate": "2026-01-01"
+        }
+      ]
+    },
+    {
+      "id": "app-b",
+      "name": {
+        "zh": "App B",
+        "en": "App B"
+      },
+      "summaryProblem": {
+        "zh": "给经常在手机与电脑间拷文字/链接的人；端到端加密，同步延迟通常小于 1 秒。",
+        "en": "For people who copy between phone and desktop—E2E-encrypted sync, usually sub-second."
+      },
+      "summaryPricing": {
+        "zh": "基础版免费；Pro ¥38/年（多设备、历史版本更长）。客户端代码部分开源（GPL-3.0）。",
+        "en": "Free tier available; Pro ¥38/year (more devices, longer history). Client partially open source (GPL-3.0)."
+      },
+      "platforms": {
+        "zh": "Windows 10+、macOS 12+、Android 9+；Web 控制台只读管理（可选）。",
+        "en": "Windows 10+, macOS 12+, Android 9+; optional read-only web dashboard."
+      },
+      "pricingDetail": {
+        "zh": "免费档：最多 2 台设备、保留 7 天历史。Pro：最多 5 台设备、90 天历史；学生可邮件申请教育优惠。",
+        "en": "Free: 2 devices, 7-day history. Pro: 5 devices, 90-day history. Student discount via email."
+      },
+      "privacy": {
+        "zh": "同步内容经端到端加密，服务端无法解密剪贴板明文。需网络权限；可选蓝牙/局域网发现（仅用于配对）。隐私政策见站点 /privacy（示例路径）。安装包约 45 MB（桌面）。",
+        "en": "Clipboard payloads are E2E-encrypted; server cannot read plaintext. Network required; optional Bluetooth/LAN for pairing only. See /privacy. ~45 MB desktop installer."
+      },
+      "updateChannel": {
+        "zh": "本页提供各平台安装包；小版本热更新在应用内检查；安全公告发在博客（示例）。",
+        "en": "Installers on this page; in-app checks for patches; security advisories on the blog (example)."
+      },
+      "media": [
+        {
+          "type": "video",
+          "url": "videos/test1.mp4",
+          "poster": "images/app2-poster.jpg",
+          "alt": {
+            "zh": "应用演示视频",
+            "en": "App demo video"
+          }
+        }
+      ],
+      "versions": [
+        {
+          "version": "2.0.1",
+          "description": {
+            "zh": "修复 Windows 睡眠唤醒后断连",
+            "en": "Reconnect fix after Windows sleep"
+          },
+          "downloadUrl": "https://example.com/downloads/app-b-v2.0.1.dmg",
+          "releaseDate": "2026-02-10"
+        },
+        {
+          "version": "2.0.0",
+          "description": {
+            "zh": "新加密协议；需全端升级",
+            "en": "New encryption protocol; all clients must update"
+          },
+          "downloadUrl": "https://example.com/downloads/app-b-v2.0.0.dmg",
+          "releaseDate": "2026-01-20"
+        }
+      ]
+    }
+  ]
+}
