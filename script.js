@@ -89,12 +89,18 @@ function applySiteChrome(config) {
     const site = config.site || {};
     const titleEl = document.getElementById('nav-title');
     const heroEl = document.getElementById('hero-subtitle');
+    const kickerEl = document.getElementById('hero-kicker');
     const footerEl = document.getElementById('footer-text');
     if (site.pageTitle) {
         document.title = pick(site.pageTitle, currentLang);
     }
     if (titleEl && site.navTitle) titleEl.textContent = pick(site.navTitle, currentLang);
     if (heroEl && site.heroSubtitle) heroEl.textContent = pick(site.heroSubtitle, currentLang);
+    if (kickerEl) {
+        const k = site.heroKicker ? pick(site.heroKicker, currentLang) : '';
+        kickerEl.textContent = k;
+        kickerEl.hidden = !k;
+    }
     if (footerEl && site.footer) footerEl.textContent = pick(site.footer, currentLang);
 }
 

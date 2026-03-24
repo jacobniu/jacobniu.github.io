@@ -1,20 +1,24 @@
 {
   "site": {
     "pageTitle": {
-      "zh": "🛠 Jacob 的应用",
-      "en": "🛠 Jacob's Apps"
+      "zh": "Jacob Niu · 软件",
+      "en": "Jacob Niu · Software"
     },
     "navTitle": {
-      "zh": "🛠 Jacob 的应用",
-      "en": "🛠 Jacob's Apps"
+      "zh": "Jacob Niu · 软件",
+      "en": "Jacob Niu · Software"
+    },
+    "heroKicker": {
+      "zh": "发布与下载",
+      "en": "Releases & downloads"
     },
     "heroSubtitle": {
       "zh": "更快、更轻、更好用的软件",
-      "en": "Discover faster, lighter and better apps"
+      "en": "Faster, lighter software you can trust and ship."
     },
     "footer": {
-      "zh": "© 2026 设计 Jacob",
-      "en": "© 2026 Design by Jacob"
+      "zh": "© 2026 Jacob Niu",
+      "en": "© 2026 Jacob Niu"
     }
   },
   "apps": [
